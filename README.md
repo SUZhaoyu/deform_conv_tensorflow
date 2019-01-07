@@ -20,7 +20,7 @@ _**Note**_: this repo was only varified based on the above configuration.
 ## Usage
 To build the project, simply execute `compile.sh` under the root of repo, a new folder `build` will be created 
 and the compiled files will be saved there. To call the operation in tensorflow, the `deform_conv2d` should be imported from
- `utils.deform_conv_wrapper`, and the [API introduction](https://github.com/SUZhaoyu/deform_conv_tensorflow/blob/193334b19dcee6b79e4a3c43752c5360af3f1040/utils/deform_conv_wrapper.py#L11) 
+ `utils.deform_conv_wrapper`, and the [API introduction](https://github.com/SUZhaoyu/deform_conv_tensorflow/blob/7708db6c2c61ed1eeb1e4d55e9bdd2b7b9e3ff5b/utils/deform_conv_wrapper.py#L13) 
 are also given in the definition of `deform_conv2d`.
 
 To verify if the compiled project is able to work properly, a very simple test script is provided in `utils/deform_conv_test.py`, 
