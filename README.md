@@ -1,6 +1,6 @@
 ## Introduction
-This repo is a tensorflow implementation of [deformable convolution]("https://arxiv.org/abs/1703.06211") with C++/CUDA. 
-The core CUDA implementation logic is borrowed from the original [MXNet implementation]("https://github.com/msracver/Deformable-ConvNets")
+This repo is a tensorflow implementation of [deformable convolution](https://arxiv.org/abs/1703.06211) with C++/CUDA. 
+The core CUDA implementation logic is borrowed from the original [MXNet implementation](https://github.com/msracver/Deformable-ConvNets)
 and I rewrote the code to increase the readability.
 
 The repo also contains a simple trial test and visualization of the offsets, which lies at the core concept in deformable convolution.
@@ -19,13 +19,14 @@ _**Note**_: this repo was only varified based on the above configuration.
 ## Usage
 To build the project, simply execute `compile.sh` under the root of repo, a new folder `build` will be created 
 and the compiled files will be saved there. To call the operation in tensorflow, the `deform_conv2d` should be imported from
- `utils.deform_conv_wrapper`, and the API introduction are also given in the definition of `deform_conv2d`.
+ `utils.deform_conv_wrapper`, and the [API introduction](https://github.com/SUZhaoyu/deform_conv_tensorflow/blob/193334b19dcee6b79e4a3c43752c5360af3f1040/utils/deform_conv_wrapper.py#L11) 
+are also given in the definition of `deform_conv2d`.
 
 To verify if the compiled project is able to work properly, a very simple test script is provided in `utils/deform_conv_test.py`, 
 which feeds some random number as the input and calculates the output as well as the gradients w.r.t. inputs.
 
 ## Scaled MNIST Test
-Following the same idea as [another implementation in keras]("https://github.com/kastnerkyle/deform-conv"):
+Following the same idea as [another implementation in keras](https://github.com/kastnerkyle/deform-conv):
 > To demonstrate the effectiveness of deformable convolution with scaled images, we show that by simply replacing regular 
 convolution with deformable convolution and fine-tuning just the offsets with a scale-augmented datasets, deformable CNN 
 performs significantly better than regular CNN on the scaled MNIST dataset. This indicates that deformable convolution is 
@@ -55,7 +56,7 @@ A visualization of offsets in the first and second layer of the deformable CNN i
 
 The visualization is achieved by feeding multiple scaled images as input, calculating the offsets w.r.t each input image 
 and plotting them according to the actual sampling location in the raw input image. Only the offsets whose value are above 
-a certain threshold are plotted, and the threshold are noted in the image for each deform conv layer.
+a certain threshold are plotted, and the thresholds for different deform conv layers are noted in the image.
 
 If you want to produce visualization for your own input image, put your own `test_img.png` into folder `img` and run 
 `plot_conv_test.py`, the result will be also saved in folder `img`. As the weights for both regular CNN and deformable CNN
@@ -72,4 +73,4 @@ the final result.
 
 - The CUDA calculation is implemented using CuBLAS instead of CuDNN, which makes it not so efficient.
 
-- The implementation of [deformable convolution V2]("https://arxiv.org/abs/1811.11168") is in progress.
+- The implementation of [deformable convolution V2](https://arxiv.org/abs/1811.11168) is in progress.
