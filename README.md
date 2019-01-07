@@ -1,7 +1,8 @@
 ## Introduction
-This repo is a tensorflow implementation of [deformable convolution](https://arxiv.org/abs/1703.06211) with C++/CUDA. 
-The core CUDA implementation logic is borrowed from the original [MXNet implementation](https://github.com/msracver/Deformable-ConvNets)
-and I rewrote the code to increase the readability.
+This repo is a tensorflow implementation of [deformable convolution](https://arxiv.org/abs/1703.06211) with C++/CUDA.
+ 
+The core implementation idea is borrowed from the original [MXNet implementation](https://github.com/msracver/Deformable-ConvNets)
+and [here](https://github.com/Zardinality/TF-deformable-conv). I rewrote the code to increase the readability. 
 
 The repo also contains a simple trial test and visualization of the offsets, which lies at the core concept in deformable convolution.
 
