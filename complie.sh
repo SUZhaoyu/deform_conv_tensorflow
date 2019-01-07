@@ -1,3 +1,7 @@
+if [ ! -d ./build ]; then
+  mkdir build
+fi
+
 TF_INC=$(python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')
 echo $TF_INC
 if [ ! -f $TF_INC/tensorflow/stream_executor/cuda/cuda_config.h ]; then

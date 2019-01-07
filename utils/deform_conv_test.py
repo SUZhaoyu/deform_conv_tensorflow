@@ -43,8 +43,7 @@ with tf.Session(config=config) as sess:
 						    deform_group=deform_group,
 						    data_format="NCHW")
 		grad = tf.gradients(res, [input_tensor, filter_tensor, offset_tensor])
-		output = sess.run(res)
-		# output = [sess.run(g) for g in grad]
-# print(output[0])
-# print(output[1])
-# print(output[2])
+		output = [sess.run(g) for g in grad]
+print(output[0])
+print(output[1])
+print(output[2])

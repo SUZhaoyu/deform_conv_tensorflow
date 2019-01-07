@@ -1,8 +1,8 @@
 # Compiled Object files
-*.slo
-*.lo
 *.o
-*.obj
 *.so
 *.pyc
+*.xml
+*.iml
+.DS_Store
 
