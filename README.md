@@ -6,7 +6,7 @@ and [here](https://github.com/Zardinality/TF-deformable-conv). I rewrote the cod
 
 The repo also contains a simple trial test and visualization of the offsets, which lies at the core concept in deformable convolution.
 
-## Platform Request
+## Requirement
 Tensorflow 1.12.0
 
 CUDA 9.0
